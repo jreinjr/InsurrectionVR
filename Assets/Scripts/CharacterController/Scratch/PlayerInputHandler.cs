@@ -13,6 +13,7 @@ namespace InsurrectionVR
         [SerializeField] [Expandable] private InputFloat MouseYInput;
         [SerializeField] [Expandable] private InputFloat JumpInput;
         [SerializeField] [Expandable] private InputFloat StrafeInput;
+        [SerializeField] [Expandable] private InputFloat SprintInput;
 
         public override void ReadInput()
         {
@@ -31,6 +32,7 @@ namespace InsurrectionVR
             MouseY     = MouseYInput.Value;
             Jump       = JumpInput.Value;
             Strafe     = StrafeInput.Value;
+            Sprint     = StrafeInput.Value;
         }
 
         protected float GetAxisInput(InputFloat input)
@@ -50,7 +52,8 @@ namespace InsurrectionVR
              || !MouseXInput
              || !MouseYInput
              || !JumpInput
-             || !StrafeInput)
+             || !StrafeInput
+             || !SprintInput)
             {
                 Debug.LogErrorFormat("At least one input is not connected in the inspector for {0}", this.name);
                 return false;

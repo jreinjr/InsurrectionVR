@@ -13,6 +13,7 @@ namespace InsurrectionVR
         [HideInInspector] public float MouseY { get; protected set; }
         [HideInInspector] public float Jump { get; protected set; }
         [HideInInspector] public float Strafe { get; protected set; }
+        [HideInInspector] public float Sprint { get; protected set; }
 
         // Output Bools
         [HideInInspector] public bool HasAnyInput { get; protected set; }
@@ -22,6 +23,7 @@ namespace InsurrectionVR
         [HideInInspector] public bool HasMouseYInput { get; protected set; }
         [HideInInspector] public bool HasJumpInput { get; protected set; }
         [HideInInspector] public bool HasStrafeInput { get; protected set; }
+        [HideInInspector] public bool HasSprintInput { get; protected set; }
 
         /// <summary>
         ///  Updates bools - override this at the end of child methods
@@ -39,6 +41,7 @@ namespace InsurrectionVR
             HasMouseYInput = HasAxisInput(MouseY);
             HasJumpInput = HasAxisInput(Jump);
             HasStrafeInput = HasAxisInput(Strafe);
+            HasSprintInput = HasAxisInput(Sprint);
 
             HasAnyInput = HasHorizontalInput
                        || HasVerticalInput
@@ -46,6 +49,7 @@ namespace InsurrectionVR
                        || HasMouseYInput
                        || HasJumpInput
                        || HasStrafeInput
+                       || HasSprintInput
                        ;
         }
 

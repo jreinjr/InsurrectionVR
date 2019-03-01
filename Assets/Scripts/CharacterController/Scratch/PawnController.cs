@@ -11,23 +11,13 @@ namespace InsurrectionVR
     public abstract class PawnController : MonoBehaviour
     {
         [SerializeField] [Expandable] protected InputHandler input;
+        public InputHandler Input { get { return input; } set { input = value; } }
 
-        protected virtual void Update()
-        {
-            if (input)
-            {
-                ReadInput();
-
-                if (input.HasAnyInput)
-                    HandleInput();
-            }
-        }
-
+        
         protected virtual void ReadInput()
         {
             input.ReadInput();
         }
-
 
         protected abstract void HandleInput();
     }

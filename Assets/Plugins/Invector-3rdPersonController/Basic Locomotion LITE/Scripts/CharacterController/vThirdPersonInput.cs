@@ -22,14 +22,6 @@ namespace Invector.CharacterController
 
         protected vThirdPersonCamera tpCamera;                // acess camera info        
         [HideInInspector]
-        public string customCameraState;                    // generic string to change the CameraState        
-        [HideInInspector]
-        public string customlookAtPoint;                    // generic string to change the CameraPoint of the Fixed Point Mode        
-        [HideInInspector]
-        public bool changeCameraState;                      // generic bool to change the CameraState        
-        [HideInInspector]
-        public bool smoothCameraState;                      // generic bool to know if the state will change with or without lerp  
-        [HideInInspector]
         public bool keepDirection;                          // keep the current direction in case you change the cameraState
 
         protected vThirdPersonController cc;                // access the ThirdPersonController component                
@@ -39,6 +31,24 @@ namespace Invector.CharacterController
         protected virtual void Start()
         {
             CharacterInit();
+        }
+
+        protected virtual void FixedUpdate()
+        {
+            cc.AirControl();
+            CameraInput();
+        }
+
+        protected virtual void Update()
+        {
+            cc.UpdateMotor();                   // call ThirdPersonMotor methods               
+            cc.UpdateAnimator();                // call ThirdPersonAnimator methods		               
+        }
+
+        protected virtual void LateUpdate()
+        {
+            if (cc == null) return;             // returns if didn't find the controller		    
+            InputHandle();                      // update input methods
         }
 
         protected virtual void CharacterInit()
@@ -52,25 +62,6 @@ namespace Invector.CharacterController
 
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-        }
-
-        protected virtual void LateUpdate()
-        {
-            if (cc == null) return;             // returns if didn't find the controller		    
-            InputHandle();                      // update input methods
-            UpdateCameraStates();               // update camera states
-        }
-
-        protected virtual void FixedUpdate()
-        {
-            cc.AirControl();
-            CameraInput();
-        }
-
-        protected virtual void Update()
-        {
-            cc.UpdateMotor();                   // call ThirdPersonMotor methods               
-            cc.UpdateAnimator();                // call ThirdPersonAnimator methods		               
         }
 
         protected virtual void InputHandle()

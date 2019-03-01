@@ -1,15 +1,23 @@
 ﻿using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
-public abstract class Ability : ScriptableObject
+namespace InsurrectionVR
 {
-    public abstract void Execute();
-}
-
-[CreateAssetMenu(menuName ="Ability/Jump")]
-public class Jump : Ability
-{
-    public override void Execute()
+    public abstract class Ability<T>
     {
-        throw new System.NotImplementedException();
+        public abstract void Cast(PawnController caster, T target);
+    }
+
+
+    public class MindControlAbility : Ability<PawnController>
+    {
+        public override void Cast(PawnController caster, PawnController target)
+        {
+            target.Input = caster.Input;
+            caster.Input = null;
+        }
     }
 }
+

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d1369b528a53543a24bf30c40a86e7, type: 3}
+  m_Name: P1 Humanoid Controls
+  m_EditorClassIdentifier: 
+  hotkeys:
+  - {fileID: 11400000, guid: 801957d9619857e458c94f7d4c6a1b77, type: 2}
+  - {fileID: 11400000, guid: 8a0d1f79dd51fcb40bcd6b097b78770c, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: 6a1b259c260c4fa4b98c56fea58d3e8f, type: 2}
+  - {fileID: 0}

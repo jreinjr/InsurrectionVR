@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 5b5490e68cfb7bb46942ea590c016c42
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - _rigidbody: {instanceID: 0}
+  - maxFrictionPhysics: {instanceID: 0}
+  - frictionPhysics: {instanceID: 0}
+  - slippyPhysics: {instanceID: 0}
+  - _capsuleCollider: {instanceID: 0}
+  - OnStrafeEnter: {fileID: 11400000, guid: 2d321276d88db2d4e939f8ad42d30cf8, type: 2}
+  - OnStrafeExit: {fileID: 11400000, guid: 1022d5462be85654382e956beaa8ac61, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

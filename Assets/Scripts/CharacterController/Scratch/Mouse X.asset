@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee12a7a7131c26e478dcb4582e552803, type: 3}
-  m_Name: MouseX
+  m_Name: Mouse X
   m_EditorClassIdentifier: 
-  isAxis: 0
-  AxisString: 
+  isAxis: 1
+  AxisString: Mouse X
   KeyCode: 0

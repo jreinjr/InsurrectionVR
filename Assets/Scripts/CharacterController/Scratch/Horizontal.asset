@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee12a7a7131c26e478dcb4582e552803, type: 3}
   m_Name: Horizontal
   m_EditorClassIdentifier: 
-  isAxis: 0
-  AxisString: 
+  isAxis: 1
+  AxisString: Horizontal
   KeyCode: 0

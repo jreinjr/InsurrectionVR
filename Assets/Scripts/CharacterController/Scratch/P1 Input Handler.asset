@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b4bf4fff7fc7294c85a8b6b1f2286bd, type: 3}
-  m_Name: P1 Humanoid
+  m_Name: P1 Input Handler
   m_EditorClassIdentifier: 
-  Horizontal: {fileID: 11400000, guid: eec5571dbf012db4fa342172e99609a1, type: 2}
-  Vertical: {fileID: 11400000, guid: 28fb1fddcf8eb6842b5efe1cde751aa9, type: 2}
-  MouseX: {fileID: 11400000, guid: 10b25dc5e2b44e740bc6f579d4366df8, type: 2}
-  MouseY: {fileID: 11400000, guid: 6d2320da1b81455409bd159ad02feb33, type: 2}
-  Jump: {fileID: 11400000, guid: 801957d9619857e458c94f7d4c6a1b77, type: 2}
-  Strafe: {fileID: 11400000, guid: 8a0d1f79dd51fcb40bcd6b097b78770c, type: 2}
+  HorizontalInput: {fileID: 11400000, guid: eec5571dbf012db4fa342172e99609a1, type: 2}
+  VerticalInput: {fileID: 11400000, guid: 28fb1fddcf8eb6842b5efe1cde751aa9, type: 2}
+  MouseXInput: {fileID: 11400000, guid: 10b25dc5e2b44e740bc6f579d4366df8, type: 2}
+  MouseYInput: {fileID: 11400000, guid: 6d2320da1b81455409bd159ad02feb33, type: 2}
+  JumpInput: {fileID: 11400000, guid: 801957d9619857e458c94f7d4c6a1b77, type: 2}
+  StrafeInput: {fileID: 11400000, guid: 8a0d1f79dd51fcb40bcd6b097b78770c, type: 2}
